@@ -1,5 +1,9 @@
 @import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap";
 
+:root {
+   --color-violet : #6567dd
+}
+
 *{ margin:0;
     padding:0;
     border:0;
@@ -18,7 +22,11 @@
     text-align:center;
     }
 
-    header div a {
+    body div h1{
+       text-align: center;
+    }
+
+    .links a {
     color: white;
     font-size:18px;
     line-height:28px;
@@ -26,8 +34,8 @@
     text-decoration: none;
     }
     /* transition um atraso na exibição de cor*/
-     header div a:hover {
-     color:#6567dd;
+     .links a:hover {
+     color:var(--color-violet);
      transition:700ms;
      }
 
@@ -39,8 +47,8 @@
         }
 
      body div p a:hover {
-         color : #6567dd;
-         transition: 700ms;
+         color : var(--color-violet);
+         transition: 500ms;
      }
 
      #Perfil {
@@ -50,8 +58,9 @@
          /*Arredondamento da imagem*/
      #Perfil img {
         border-radius: 50%;
-        border: 5px solid #6567dd;
+        border: 5px solid var(--color-violet);
         margin-bottom: 32px;
+        height: 300px;
      }
 
      #Perfil h1{
@@ -65,5 +74,65 @@
         line-height: 34px;
         font-weight: normal;
         margin-top: 8px;
-        opacity: 0.8;
+        opacity: 1.8;
      }
+
+     #Perfil p {
+        max-width: 500px;
+        margin: auto; /*para o paragrafo ficar no centro da tela*/
+        font-size: 18px;
+        line-height: 34px;
+     }
+
+     #rodape {
+      text-align: center;
+     }
+
+     #rodape a{
+        color:white;  
+        margin: 8px;  
+        border-bottom: 1px solid var(--color-violet);   /*Um traço em baixo do texto com cor*/
+        text-decoration: none;        
+}
+    #rodape a:hover{
+       transition: 500ms;
+       color: var(--color-violet) ;
+         }
+
+         /*========Cards========*/
+
+    .cards{
+       max-width: 800px;
+       margin: 0 auto;
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       gap:20px;
+       }
+
+    .card{
+       background-color: var(--color-violet);
+    }
+
+    .card-image-container img{
+       width:100%;
+    }
+
+    .card-content, .card-info {
+       padding: 24px;
+    }
+    
+    .card-info{
+       display: grid;
+       grid-template-columns:  1fr 1fr;
+    }
+
+    .card-price {
+     background-color: #7159c1;
+     filter:brightness(90%);
+     padding: 5px 20px;
+     border-radius: 20px;
+     text-align: center;
+    }
+      
+
+
